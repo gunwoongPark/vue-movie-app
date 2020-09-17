@@ -17,7 +17,6 @@ export default {
     },
     actions: {
         async searchMovies({ state, commit }) {
-            // state.loading = true;
             commit('updateState', {
                 loading: true
             })
@@ -25,8 +24,9 @@ export default {
                 `http://www.omdbapi.com/?apikey=5b48b817&s=${state.title}`
             );
             console.log(res.data);
-            state.movies = res.data.Search
+
             commit('updateState', {
+                movies: res.data.Search,
                 loading: false
             })
         },
