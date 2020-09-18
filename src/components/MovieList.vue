@@ -11,7 +11,7 @@
       sm="6"
     >
       <v-card>
-        <v-img :src="movie.Poster" :alt="movie.Title"></v-img>
+        <v-img :src="movie.Poster" :alt="movie.Title" height="300"></v-img>
         <v-card-title>{{movie.Title}}</v-card-title>
         <v-card-subtitle>{{movie.Year}}</v-card-subtitle>
       </v-card>
